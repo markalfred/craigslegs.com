@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <title>Craig's Legs</title>
+  <style>
+    #image {
+      transition: transform 20s;
+    }
+  </style>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-80438532-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</head>
+
+<body style="width:100%; height:100%; text-align:center; margin:auto; font-family:sans-serif;">
+  <div style="position:absolute; top:50%; left:50%; transform: translate(-50%, -50%) ">
+    <img id="image" />
+  </div>
+  <audio src="http://api.ning.com/files/pq1Cv8oIyL3H*DAUogHC*VJzai9fWboL5Rc8pKZaIFHOcdU-pdt5jpKvDG-tBivXyNn1Ny9G8C9xrkRn7S7j5O8uwwS0cEH3/iomnZqWniqyeZ2WKmqeCqKJ8p2ula2SllWiUlaFsinqhk4p3pqaop3-pV1g1.mp3" autoplay="true"></audio>
+
+  <script type="text/javascript">
+    var legz = [
+      { x: -170, y: -200, z: 11, sz: 1, url: 'https://c676132.ssl.cf0.rackcdn.com/sunsoutgunsoutrrr2014-56de3e0b4c0a4.jpeg?574874356fe13' },
+      { x: 350, y: -30, z: 5, sz: 1, url: 'https://i.ytimg.com/vi/gPAC8sUqOTk/maxresdefault.jpg' },
+      { x: 400, y: -25, z: 3, sz: 1, url: 'https://i.ytimg.com/vi/SKGrxQ3kmRU/maxresdefault.jpg' },
+      { x: 800, y: -150, z: 2, sz: 0.25, url: './images/desk.jpg' },
+      { x: 308, y: 912, z: 5, sz: 0.1, url: './images/jolicoeur.jpg' }
+    ]
+
+    var leg = legz[Math.floor(Math.random()*legz.length)]
+    var img = document.getElementById('image')
+
+    img.setAttribute('style', 'transform: scale(' + leg.sz +') translate(' + leg.x / 2 + 'px, ' + leg.y / 2 + 'px)')
+
+    setTimeout(function() {
+      img.src = leg.url
+      img.setAttribute('style', 'transform: scale(' + leg.z + ') translate(' + leg.x + 'px, ' + leg.y + 'px)')
+    }, 0)
+  </script>
+</body>
+
+</html>
